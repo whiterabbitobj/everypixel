@@ -12,12 +12,4 @@ api_key = "PY7JPmcJmlRaktG05ADnT2d1" #ADD CLIENT ID HERE
 url_ver = "https://api.everypixel.com/v1"
 
 
-
-
-### DONT TOUCH ME BELOW ###
-files = [os.path.join(img_path,f) for f in os.listdir(img_path) if os.path.isfile(os.path.join(img_path,f))]
-for f in files:
-    with open(f,'rb') as image:
-        data = {'data': image}
-        keywords = requests.post('https://api.everypixel.com/v1/keywords', files=data, auth=(api_key, api_secret)).json()
         print(keywords)
